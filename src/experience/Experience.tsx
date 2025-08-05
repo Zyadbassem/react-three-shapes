@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import Galaxy from "./shapes/Galaxy/Galaxy";
 
 export default function Experience() {
   return (
@@ -10,10 +11,7 @@ export default function Experience() {
       <OrbitControls />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color="#fff" />
-      </mesh>
+      <Galaxy />
     </Canvas>
   );
 }
